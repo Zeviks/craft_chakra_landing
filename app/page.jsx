@@ -1,12 +1,17 @@
+"use client";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
+import { Hero, Feature, Pricing, Testimonials } from "../components";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      <h1>Howdy!</h1>
+      <Hero />
+      <Feature />
+      <Pricing />
+      <Testimonials />
     </>
   );
 }

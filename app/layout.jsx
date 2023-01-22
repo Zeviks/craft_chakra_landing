@@ -1,16 +1,17 @@
 "use client";
 import { ChakraProvider } from "@chakra-ui/react";
+import { Navbar, Footer } from "../components";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
       <body>
-        <ChakraProvider>{children}</ChakraProvider>
+        <ChakraProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ChakraProvider>
       </body>
     </html>
   );
